@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so" id="gt">
+<button onclick="Tinh()">Tinh</button>
+<h2 id="rs"></h2>
+<script>
+    function Tinh() {
+        let a = document.getElementById('gt').value;
+        let GT = 1;
+        for (let i=2; i<= +a; i++) {
+            GT = GT * i;
+        }
+        document.getElementById('rs').innerHTML = "Giai Thua: " +GT;
+    }
+</script>
+</body>
+</html>

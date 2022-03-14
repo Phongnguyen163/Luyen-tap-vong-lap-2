@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so phan tu day fibonacci" id="sl">
+<button onclick="Ktra()">In ra</button>
+<h2 id="rs"></h2>
+<script>
+    function Ktra() {
+        let text = "";
+        let f0 = 0;
+        text = text + " " + f0;
+        let f1 = 1;
+        text = text = text + " " + f1;
+        let count = 1;
+        let amount = document.getElementById("sl").value;
+        while (count <= +amount-2) {
+            let f2 = f0+f1;
+            text = text + " " + f2;
+            f0 = f1;
+            f1 = f2;
+            count++;
+        }
+        document.getElementById('rs').innerText = "Chuoi " + amount + " so fibonacci: " + text;
+    }
+</script>
+</body>
+</html>

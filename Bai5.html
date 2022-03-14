@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so tien gui" id="tg">
+<input type="text" placeholder="Nhap lai suat" id="ls">
+<input type="text" placeholder="Thoi gian gui" id="thg">
+<button onclick="Tinh()">Tinh lai</button>
+<h2 id="rs"></h2>
+<script>
+    function Tinh () {
+        let Tien = +document.getElementById('tg').value;
+        let LaiS = +document.getElementById('ls').value;
+        let ThoiG = +document.getElementById('thg').value;
+        let TLai;
+        let i = 0;
+        while (i < ThoiG){
+            TLai = Tien * LaiS / 100;
+            Tien = Tien + TLai;
+            i++;
+        }
+        document.getElementById('rs').innerHTML = "Tien Lai: " + Tien + "VND";
+    }
+</script>
+</body>
+</html>
